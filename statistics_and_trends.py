@@ -15,7 +15,8 @@ import seaborn as sns
 
 def plot_relational_plot(df):
     """
-    Relational plot: Scatter plot showing relationship between Mileage and Price.
+    Relational plot: Scatter plot showing relationship 
+    between Mileage and Price.
     """
     plt.figure(figsize=(8, 6))
     sns.scatterplot(data=df, x='Mileage', y='Price(GBP)', hue='Fuel type', alpha=0.7)
@@ -31,12 +32,7 @@ def plot_categorical_plot(df):
     Categorical plot: Average price by manufacturer.
     """
     plt.figure(figsize=(10, 6))
-    avg_price = (
-    df.groupby('Manufacturer')['Price(GBP)']
-      .mean()
-      .sort_values(ascending=False)
-      .head(10)
-)
+    avg_price = (df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(ascending=False).head(10))
     avg_price.plot(kind='bar', color='skyblue')
     plt.title('Average Car Price by Top 5 Manufacturers')
     plt.xlabel('Manufacturer')

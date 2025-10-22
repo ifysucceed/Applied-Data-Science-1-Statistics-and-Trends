@@ -21,7 +21,7 @@ def plot_relational_plot(df):
     """
     fig, ax = plt.subplots()
     plt.savefig('relational_plot.png')
- qwertyuiop
+
     return
 
 

@@ -4,12 +4,13 @@ Creator: Chukwufumnaya Favour Nonum
 Description:Analysis of car dataset exploring relationships between mileage, price, and engine size.
 """
 
-from corner import corner
+#from corner import corner
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import scipy.stats as ss
 import seaborn as sns
+
 
 def plot_relational_plot(df):
     """
@@ -22,6 +23,7 @@ def plot_relational_plot(df):
     plt.ylabel('Price (GBP)')
     plt.savefig('relational_plot.png')
     plt.close()
+
 
 def plot_categorical_plot(df):
     """
@@ -38,6 +40,7 @@ def plot_categorical_plot(df):
     plt.savefig('categorical_plot.png')
     plt.close()
 
+
 def plot_statistical_plot(df):
     """
     Statistical plot: Correlation heatmap.
@@ -49,6 +52,7 @@ def plot_statistical_plot(df):
     plt.savefig('statistical_plot.png')
     plt.close()
 
+
 def statistical_analysis(df, col: str):
     """
     Calculate mean, standard deviation, skewness, and excess kurtosis of a column.
@@ -59,6 +63,7 @@ def statistical_analysis(df, col: str):
     skew = ss.skew(data)
     excess_kurtosis = ss.kurtosis(data)
     return mean, stddev, skew, excess_kurtosis
+
 
 def preprocessing(df):
     """
@@ -82,6 +87,7 @@ def preprocessing(df):
     print(df.corr(numeric_only=True))
 
     return df
+
 
 def writing(moments, col):
     """
@@ -111,6 +117,7 @@ def writing(moments, col):
         kurt_desc = "mesokurtic (normal)"
 
     print(f"The data is {skew_desc} and {kurt_desc}.")
+
 
 def main():
     df = pd.read_csv('data.csv')

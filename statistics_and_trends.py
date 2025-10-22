@@ -33,7 +33,7 @@ def plot_categorical_plot(df):
     plt.figure(figsize=(10, 6))
     avg_price = df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(ascending=False).head(10)
     avg_price.plot(kind='bar', color='skyblue')
-    plt.title('Average Car Price by Top 10 Manufacturers')
+    plt.title('Average Car Price by Top 5 Manufacturers')
     plt.xlabel('Manufacturer')
     plt.ylabel('Average Price (GBP)')
     plt.xticks(rotation=45, ha='right')

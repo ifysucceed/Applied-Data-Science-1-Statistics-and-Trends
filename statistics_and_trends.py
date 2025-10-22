@@ -1,10 +1,11 @@
 """
 Statistics and Trends Assignment
 Creator: Chukwufumnaya Favour Nonum
-Description:Analysis of car dataset exploring relationships between mileage, price, and engine size.
+Description:Analysis of car dataset exploring relationships
+between mileage, price, and engine size.
 """
 
-#from corner import corner
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

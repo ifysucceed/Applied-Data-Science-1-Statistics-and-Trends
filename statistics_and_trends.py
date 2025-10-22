@@ -15,8 +15,7 @@ import seaborn as sns
 
 def plot_relational_plot(df):
     """
-    Relational plot: Scatter plot showing relationship 
-    between Mileage and Price.
+    Relational plot: Scatter plot showing relationship between Mileage and Price.
     """
     plt.figure(figsize=(8, 6))
     sns.scatterplot(data=df, x='Mileage', y='Price(GBP)', hue='Fuel type', alpha=0.7)

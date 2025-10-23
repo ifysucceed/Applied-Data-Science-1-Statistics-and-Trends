@@ -40,7 +40,8 @@ def preprocessing(df):
 
 def plot_relational_plot(df):
     """
-    Relational plot: Scatter plot showing relationship between Mileage and Price.
+    Relational plot: Scatter plot showing relationship between Mileage 
+    and Price.
     """
     plt.figure(figsize=(8, 6))
     sns.scatterplot(data=df, x='Mileage', y='Price(GBP)', hue='Fuel type', alpha=0.7)
@@ -58,7 +59,7 @@ def plot_categorical_plot(df):
     plt.figure(figsize=(10, 6))
     avg_price = df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(
     ascending=False
-).head(10)
+    ).head(10)
 
     # Generate distinct viridis colors for each bar
     cmap = plt.colormaps['viridis']
@@ -88,7 +89,8 @@ def plot_statistical_plot(df):
 
 def statistical_analysis(df, col: str):
     """
-    Calculate mean, standard deviation, skewness, and excess kurtosis of a column.
+    Calculate mean, standard deviation, skewness, 
+    and excess kurtosis of a column.
     """
     data = df[col].dropna()
     mean = np.mean(data)

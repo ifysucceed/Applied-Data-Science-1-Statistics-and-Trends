@@ -13,6 +13,31 @@ import scipy.stats as ss
 import seaborn as sns
 
 
+def preprocessing(df):
+    """
+    Clean and prepare data for analysis.
+    Returns the cleaned DataFrame.
+    """
+    print("Initial Data Overview:")
+    print(df.head())
+    print("\nSummary Statistics:")
+    print(df.describe())
+
+    # Drop rows with missing values
+    df = df.dropna()
+
+    # Convert columns to appropriate types
+    df['Year of manufacture'] = df['Year of manufacture'].astype(int)
+    df['Engine size'] = df['Engine size'].astype(float)
+    df['Mileage'] = df['Mileage'].astype(float)
+    df['Price(GBP)'] = df['Price(GBP)'].astype(float)
+
+    print("\nCorrelation Matrix:")
+    print(df.corr(numeric_only=True))
+
+    return df
+
+
 def plot_relational_plot(df):
     """
     Relational plot: Scatter plot showing relationship between Mileage and Price.
@@ -64,30 +89,6 @@ def statistical_analysis(df, col: str):
     skew = ss.skew(data)
     excess_kurtosis = ss.kurtosis(data)
     return mean, stddev, skew, excess_kurtosis
-
-
-def preprocessing(df):
-    """
-    Clean and prepare data for analysis.
-    """
-    print("Initial Data Overview:")
-    print(df.head())
-    print("\nSummary Statistics:")
-    print(df.describe())
-
-    # Drop rows with missing values
-    df = df.dropna()
-
-    # Convert columns to appropriate types
-    df['Year of manufacture'] = df['Year of manufacture'].astype(int)
-    df['Engine size'] = df['Engine size'].astype(float)
-    df['Mileage'] = df['Mileage'].astype(float)
-    df['Price(GBP)'] = df['Price(GBP)'].astype(float)
-
-    print("\nCorrelation Matrix:")
-    print(df.corr(numeric_only=True))
-
-    return df
 
 
 def writing(moments, col):

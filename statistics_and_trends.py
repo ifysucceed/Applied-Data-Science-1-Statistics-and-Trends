@@ -42,8 +42,8 @@ def plot_relational_plot(df):
     """
     Relational plot: Scatter plot showing relationship between Mileage and Price.
     """
-    plt.figure(figsize=(8, 6))
-    sns.scatterplot(data=df, x='Mileage', y='Price(GBP)', hue='Fuel type', alpha=0.7)
+    plt.figure(figsize = (8, 6))
+    sns.scatterplot(data = df, x = 'Mileage', y = 'Price(GBP)', hue = 'Fuel type', alpha = 0.7)
     plt.title('Relationship between Mileage and Price by Fuel Type')
     plt.xlabel('Mileage')
     plt.ylabel('Price (GBP)')
@@ -55,13 +55,19 @@ def plot_categorical_plot(df):
     """
     Categorical plot: Average price by manufacturer.
     """
-    plt.figure(figsize=(10, 6))
-    avg_price = (df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(ascending=False).head(10))
-    avg_price.plot(kind='bar', color='skyblue')
+    plt.figure(figsize = (10, 6))
+    avg_price = (df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(ascending = False).head(10))
+
+    # Generate distinct viridis colors for each bar
+    cmap = plt.colormaps['viridis']
+    colors = cmap(np.linspace(0, 0.8, len(avg_price)))
+
+    avg_price.plot(kind = 'bar', color = colors)
+    
     plt.title('Average Car Price by Top 5 Manufacturers')
     plt.xlabel('Manufacturer')
     plt.ylabel('Average Price (GBP)')
-    plt.xticks(rotation=45, ha='right')
+    plt.xticks(rotation = 45, ha = 'right')
     plt.tight_layout()
     plt.savefig('categorical_plot.png')
     plt.close()
@@ -71,8 +77,8 @@ def plot_statistical_plot(df):
     """
     Statistical plot: Correlation heatmap.
     """
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(df.corr(numeric_only=True), annot=True, cmap='coolwarm', fmt='.2f')
+    plt.figure(figsize = (8, 6))
+    sns.heatmap(df.corr(numeric_only = True), annot = True, cmap = 'coolwarm', fmt = '.2f')
     plt.title('Correlation Heatmap')
     plt.tight_layout()
     plt.savefig('statistical_plot.png')

@@ -56,7 +56,9 @@ def plot_categorical_plot(df):
     Categorical plot: Average price by manufacturer.
     """
     plt.figure(figsize=(10, 6))
-    avg_price = (df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(ascending=False).head(10))
+    avg_price = df.groupby('Manufacturer')['Price(GBP)'].mean().sort_values(
+    ascending=False
+).head(10)
 
     # Generate distinct viridis colors for each bar
     cmap = plt.colormaps['viridis']

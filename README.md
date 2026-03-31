@@ -1,8 +1,7 @@
 # Statistical Analysis of Car Attributes and Market Trends
 
 ## 📌 Overview
-This repository is about a statistical analysis project exploring trends and relationships within a car dataset. The project was completed as part of a *Statistics and Trends* assignment.
-
+This repository is about a statistical analysis project exploring trends and relationships within a car dataset.
 The aim of this analysis is to understand how different factors such as mileage, engine size, fuel type, age (year of manufacture), and manufacturer influence car prices. The project applies data preprocessing, visualization techniques, and statistical analysis to uncover meaningful patterns.
 
 ---
@@ -11,12 +10,12 @@ The aim of this analysis is to understand how different factors such as mileage,
 
 The dataset (`data.csv`) contains information about different cars, with the following attributes:
 
-- **Manufacturer** – Brand of the car (e.g., Ford, BMW, Toyota)
+- **Manufacturer** – Brand of the car (Porsche, Ford, BMW, VW, Toyota)
 - **Model** – Specific model of the car
 - **Engine size** – Engine capacity (in litres)
-- **Fuel type** – Type of fuel used (Petrol, Diesel, Hybrid, Electric)
-- **Year of manufacture** – Production year of the vehicle
-- **Mileage** – Distance the car has travelled
+- **Fuel type** – Type of fuel used (Petrol, Diesel, Hybrid)
+- **Year of manufacture (age)** – Production year of the vehicle
+- **Mileage** – Distance the car has travelled so far
 - **Price (GBP)** – Market price of the car in British Pounds (£)
 
 ---
@@ -58,9 +57,5 @@ These metrics help describe how car prices are distributed in the dataset.
 
 ---
 
-## 🚀 How to Run the Project
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ifysucceed/statistics-and-trends-assignment.git
-cd statistics-and-trends-assignment
+## Conclusion
+This analysis reveals that car pricing is shaped by a combination of condition **(mileage and age),** performance attributes **(engine size)**, and **brand market segment.** These findings can help buyers, sellers, and dealerships to better understand the value trends within the used-car market.

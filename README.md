@@ -10,15 +10,15 @@ The aim of this analysis is to understand how different factors such as mileage,
 
 The dataset (`data.csv`) contains information about different cars, with the following attributes:
 
-- **Manufacturer** – Brand of the car (Porsche, Ford, BMW, VW, Toyota)
-- **Model** – Specific model of the car
-- **Engine size** – Engine capacity (in litres)
-- **Fuel type** – Type of fuel used (Petrol, Diesel, Hybrid)
-- **Year of manufacture (age)** – Production year of the vehicle
-- **Mileage** – Distance the car has travelled so far
-- **Price (GBP)** – Market price of the car in British Pounds (£)
+- **Manufacturer:** Brand of the car (Porsche, Ford, BMW, VW, Toyota)
+- **Model:** Specific model of the car
+- **Engine size:** Engine capacity (in litres)
+- **Fuel type:** Type of fuel used (Petrol, Diesel, Hybrid)
+- **Year of manufacture (age):** Production year of the vehicle
+- **Mileage:** Distance the car has travelled so far
+- **Price (GBP):** Market price of the car in British Pounds (£)
 
----
+--
 
 ## 📈 Analysis Performed
 

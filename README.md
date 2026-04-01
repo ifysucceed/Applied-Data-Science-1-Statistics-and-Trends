@@ -18,7 +18,7 @@ The dataset (`data.csv`) contains information about different cars, with the fol
 - **Mileage:** Distance the car has travelled so far
 - **Price (GBP):** Market price of the car in British Pounds (£)
 
---
+---
 
 ## 📈 Analysis Performed
 
@@ -48,10 +48,10 @@ Three types of plots were created:
 
 The project calculates the four main statistical moments for the **Price (GBP)** variable:
 
-- **Mean** – Average price
-- **Standard Deviation** – Spread of prices
-- **Skewness** – Direction of distribution (left/right skew)
-- **Kurtosis** – Shape of distribution (tails and outliers)
+- **Mean:** Average price
+- **Standard Deviation:** Spread of prices
+- **Skewness:** Direction of distribution (left/right skew)
+- **Kurtosis:** Shape of distribution (tails and outliers)
 
 These metrics help describe how car prices are distributed in the dataset.
 
